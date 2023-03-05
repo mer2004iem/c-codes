@@ -1,52 +1,26 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+struct temple {
+    char name[10];
+    int number;
+    float pay;
+    int hours;
+};
 
-# Linker output
-*.ilk
-*.map
-*.exp
+int main() {
+   
+    struct temple t[6];
+    for (int i = 0; i < 6; i++) {
+        printf("Enter the name for person %d: ", i+1);
+        scanf("%s",&t[i].name);
+        printf("Enter the number for person %d: ", i+1);
+        scanf("%d", &t[i].number);
+        printf("Enter the pay for person %d: ", i+1);
+        scanf("%f",&t[i].pay);
+        printf("enter hours");
+        scanf("%d",&t[i].hours);
+    }
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+   
+}
+ 
